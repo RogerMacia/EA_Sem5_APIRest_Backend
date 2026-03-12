@@ -10,11 +10,11 @@ const createOrganizacion = async (data: Partial<IOrganizacion>): Promise<IOrgani
 };
 
 const getOrganizacion = async (organizacionId: string): Promise<IOrganizacionModel | null> => {
-    return await Organizacion.findById(organizacionId);
+    return await Organizacion.findById(organizacionId).populate('Users');
 };
 
 const getAllOrganizaciones = async (): Promise<IOrganizacionModel[]> => {
-    return await Organizacion.find();
+    return await Organizacion.find().populate('Users');
 };
 
 const updateOrganizacion = async (organizacionId: string, data: Partial<IOrganizacion>): Promise<IOrganizacionModel | null> => {

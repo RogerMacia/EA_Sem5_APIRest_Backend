@@ -197,3 +197,10 @@ Para compilar manualmente:
 ```bash
 npx tsc
 ```
+
+
+# Materials consultats
+- Vídeos penjats a Atenea
+
+# Assistència IA
+- Cap
